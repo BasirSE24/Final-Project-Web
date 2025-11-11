@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ Accordion</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="container my-5">
+  <h2 class="text-center">FAQ</h2>
+  <div class="accordion">
+    <div class="accordion-header bg-secondary text-white p-3 rounded mt-2">
+      When was the team founded?
+    </div>
+    <div class="accordion-content bg-light p-3 rounded">
+      Bayern was founded in 1900 and Real Madrid in 1902.
+    </div>
+
+    <div class="accordion-header bg-secondary text-white p-3 rounded mt-2">
+      How many Champions League titles?
+    </div>
+    <div class="accordion-content bg-light p-3 rounded">
+      Real Madrid has 14 titles; Bayern Munich has 6.
+    </div>
+  </div>
+
+  <div class="text-center my-4">
+    <button id="colorChangeBtn" class="btn btn-warning">Change Background Color</button>
+  </div>
+
+  <div id="datetime" class="text-center fw-bold mb-5"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

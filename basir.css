@@ -1,0 +1,355 @@
+/*  Global Styles  */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/*  Navbar  */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.navbar a {
+  margin: 0 0.5rem;
+}
+
+/*  Cards  */
+.card {
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.card img {
+  border-bottom: 1px solid #ddd;
+}
+
+/*  Carousel  */
+.carousel img {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/*  Footer  */
+.footer {
+  background-color: #212529;
+  color: white;
+}
+
+/*  Accordion */
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.accordion-header {
+  cursor: pointer;
+  padding: 15px 20px;
+  background-color: #6c757d;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.accordion-header::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+.accordion-header.active::after {
+  content: '−';
+}
+.accordion-header.active {
+  background-color: #007bff;
+  border-radius: 5px 5px 0 0;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
+/*  Popup  */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+.close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/*  Buttons  */
+button, .btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover, .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/*  Player Items */
+.player-item {
+  background: white;
+  border-radius: 8px;
+  margin: 5px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+.player-item:hover {
+  transform: translateX(5px);
+}
+
+/*  Theme Toggle  */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+body.night-theme {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+body.night-theme .card,
+body.night-theme .accordion-content,
+body.night-theme .popup-content {
+  background-color: #2d3748;
+  color: #ffffff;
+  border-color: #4a5568;
+}
+
+/*  Scroll Progress Bar  */
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: linear-gradient(to right, #007bff, #ff6b6b, #4ecdc4);
+  width: 0;
+  z-index: 2000;
+  transition: width 0.2s ease;
+}
+
+/*  Autocomplete & Toast  */
+.autocomplete-suggestions {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  width: 50%;
+  left: 25%;
+  z-index: 999;
+}
+.autocomplete-suggestions div {
+  padding: 8px;
+  cursor: pointer;
+}
+.autocomplete-suggestions div:hover {
+  background-color: #f0f0f0;
+}
+
+.toast-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s ease;
+  z-index: 2000;
+}
+.toast-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.player-card img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.player-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 15px;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#playerSearch {
+  max-width: 400px;
+}
+
+.footer {
+  font-size: 14px;
+}
+
+.modal-content {
+  border-radius: 15px;
+}
+
+
+
+
+
+
+.accordion-header {
+  cursor: pointer;
+  position: relative;
+}
+
+.accordion-header::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.accordion-header.active::after {
+  content: '−';
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content.show {
+  max-height: 200px; 
+}
+
+
+
+
+/*  Night Mode Text */
+body.night-theme,
+body.night-theme h1,
+body.night-theme h2,
+body.night-theme h3,
+body.night-theme h4,
+body.night-theme p,
+body.night-theme span,
+body.night-theme .card-body,
+body.night-theme .modal-content,
+body.night-theme .accordion-header,
+body.night-theme .accordion-content {
+  color: #ffffff !important;
+}
+
+/* FAQ Accordion */
+body.night-theme .accordion-header {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+body.night-theme .accordion-content {
+  background-color: #222 !important;
+  border-color: #444 !important;
+  color: #ddd !important;
+}
+
+/* Cards, Players, General Sections */
+body.night-theme .player-item,
+body.night-theme .card {
+  background-color: #2a2a2a !important;
+  border-color: #3a3a3a !important;
+}
+
+body.night-theme footer {
+  background-color: #111 !important;
+  color: #ccc !important;
+}
+
+/*  Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 6px 12px;
+  font-weight: 500;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.theme-toggle:hover {
+  transform: scale(1.05);
+  background-color: #f1f1f1;
+}
+body.night-theme .theme-toggle {
+  background-color: #333;
+  color: #fff;
+  border-color: #444;
+}
+
+
+@media (max-width: 768px) {
+  .theme-toggle span {
+    display: none;
+  }
+}
